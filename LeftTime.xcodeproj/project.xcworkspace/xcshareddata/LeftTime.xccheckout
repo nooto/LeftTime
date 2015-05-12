@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EBACAC86-21C9-487C-8A4C-C9B3C4828A61</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LeftTime</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2BFA219EFBE43502014979E9E7FC1BF6D20D1EF4</key>
+		<string>https://github.com/nooto/LeftTime.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LeftTime.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2BFA219EFBE43502014979E9E7FC1BF6D20D1EF4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nooto/LeftTime.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2BFA219EFBE43502014979E9E7FC1BF6D20D1EF4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2BFA219EFBE43502014979E9E7FC1BF6D20D1EF4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LeftTime</string>
+		</dict>
+	</array>
+</dict>
+</plist>
