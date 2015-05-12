@@ -29,6 +29,7 @@
 -(TimeView*)mTimeView{
     if (!_mTimeView) {
         _mTimeView = [[TimeView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_W, (SCREEN_H - 64)/3)];
+        [_mTimeView addTarget:self action:@selector(showTimePickerView) forControlEvents:UIControlEventTouchUpInside];
     }
     return _mTimeView;
 }
@@ -86,6 +87,14 @@
 //    [self.view addSubview:self.mRegionPickView];
 }
 
+-(void)showTimePickerView{
+    CGFloat moveGap  = CGRectGetHeight(_mTimeView.frame)/2;
+    [UIView animateWithDuration:0.3f animations:^{
+        [_mTimeView setFrame:CGRectMake(0, 64 - moveGap, CGRectGetWidth(_mTimeView.frame), CGRectGetHeight(_mTimeView.frame))];
+        [_mRegionView setFrame:CGRectMake(0, CGRectGetMinY(_mRegionView.frame) + moveGap, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
+        [_mResultView setFrame:CGRectMake(0, CGRectGetMinY(_mResultView.frame) + moveGap, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
