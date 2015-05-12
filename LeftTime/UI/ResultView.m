@@ -14,9 +14,11 @@
 
 -(id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        [self setBackgroundColor:[UIColor grayColor]];
+        [self setBackgroundColor:[UIColor redColor]];
         UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 35)];
         [textLabel setText:@"结果"];
+        textLabel.textAlignment = NSTextAlignmentCenter;
+        textLabel.center = CGPointMake(self.center.x, CGRectGetHeight(frame)/2);
         [textLabel setTextColor:[UIColor whiteColor]];
         [self addSubview:textLabel];
     }

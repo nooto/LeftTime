@@ -13,9 +13,11 @@
 @implementation TimeView
 -(id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        [self setBackgroundColor:[UIColor grayColor]];
+        [self setBackgroundColor:[UIColor greenColor]];
         UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 35)];
         [textLabel setText:@"时间"];
+        textLabel.textAlignment = NSTextAlignmentCenter;
+        textLabel.center = CGPointMake(self.center.x, CGRectGetHeight(frame)/2);
         [textLabel setTextColor:[UIColor whiteColor]];
         [self addSubview:textLabel];
     }

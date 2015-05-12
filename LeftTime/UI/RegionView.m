@@ -17,6 +17,8 @@
         [self setBackgroundColor:[UIColor grayColor]];
         UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 35)];
         [textLabel setText:@"地区"];
+        textLabel.textAlignment = NSTextAlignmentCenter;
+        textLabel.center = CGPointMake(self.center.x, CGRectGetHeight(frame)/2);
         [textLabel setTextColor:[UIColor whiteColor]];
         [self addSubview:textLabel];
     }
