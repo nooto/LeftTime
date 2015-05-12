@@ -31,63 +31,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKz-Mc-Kgi">
-                                <rect key="frame" x="200" y="87" width="200" height="40"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="ASw-tA-cDJ"/>
-                                </constraints>
-                                <state key="normal" title="时间段">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="datePickViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hIe-cz-32R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7L-m8-r4n">
-                                <rect key="frame" x="200" y="157" width="200" height="40"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="dda-s7-HDF"/>
-                                </constraints>
-                                <state key="normal" title="重复">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="regionPickViewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dl-Om-zVJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhb-De-O64">
-                                <rect key="frame" x="200" y="274" width="200" height="40"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Iwo-X4-AHh"/>
-                                </constraints>
-                                <state key="normal" title="查看结果">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resuletButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUY-eb-5uc"/>
-                                    <segue destination="IXz-ed-xDt" kind="showDetail" id="oRI-bT-jEH"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="zX7-Cm-H9k">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="nvU-xx-Yf0"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WKz-Mc-Kgi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="66" id="4E3-Fx-qNX"/>
-                            <constraint firstAttribute="centerX" secondItem="R7L-m8-r4n" secondAttribute="centerX" id="C6P-pm-Pmt"/>
-                            <constraint firstItem="Dhb-De-O64" firstAttribute="top" secondItem="R7L-m8-r4n" secondAttribute="bottom" constant="77" id="MaW-qQ-Qv5"/>
-                            <constraint firstAttribute="centerX" secondItem="Dhb-De-O64" secondAttribute="centerX" id="heg-kw-u0K"/>
-                            <constraint firstItem="R7L-m8-r4n" firstAttribute="top" secondItem="WKz-Mc-Kgi" secondAttribute="bottom" constant="51" id="ioD-VW-Ph1"/>
-                            <constraint firstAttribute="centerX" secondItem="WKz-Mc-Kgi" secondAttribute="centerX" id="tW4-7v-Zls"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tgO-6g-uLW"/>
                 </viewController>

@@ -22,17 +22,18 @@
     if (self) {
         // Initialization code
         [self setBackgroundColor:[UIColor whiteColor]];
-        self.isShow = NO;
+//        self.isShow = NO;
         
-        UILabel *chineseStr = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 30)];
-        [chineseStr setTextAlignment:NSTextAlignmentLeft];
-        [chineseStr setTextColor:[UIColor whiteColor]];
-        [chineseStr setFont:[UIFont systemFontOfSize:16]];
-        [chineseStr setBackgroundColor:Color_orange_F866822];
-        [self addSubview:chineseStr];
-        self.chineseStr = chineseStr;
-        
+//        UILabel *chineseStr = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 30)];
+//        [chineseStr setTextAlignment:NSTextAlignmentLeft];
+//        [chineseStr setTextColor:[UIColor whiteColor]];
+//        [chineseStr setFont:[UIFont systemFontOfSize:16]];
+//        [chineseStr setBackgroundColor:Color_orange_F866822];
+//        [self addSubview:chineseStr];
+//        self.chineseStr = chineseStr;
+//        
         UIPickerView *mPikcer = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 30, SCREEN_W, frame.size.height - 44)];
+        [mPikcer setFrame:self.bounds];
         mPikcer.dataSource = self;
         mPikcer.delegate = self;
         [self addSubview:mPikcer];
@@ -48,18 +49,18 @@
 }
 
 -(void)showPickerView:(BOOL)show {
-    _isShow = show;
-    
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.3];
-    if (show) {
-        [self setFrame:CGRectMake(0, SCREEN_H - 246, SCREEN_W, 246)];
-    }
-    else{
-        [self setFrame:CGRectMake(0, SCREEN_H, SCREEN_W, 246)];
-    }
-    
-    [UIView commitAnimations];
+//    _isShow = show;
+//    
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.3];
+//    if (show) {
+//        [self setFrame:CGRectMake(0, SCREEN_H - 246, SCREEN_W, 246)];
+//    }
+//    else{
+//        [self setFrame:CGRectMake(0, SCREEN_H, SCREEN_W, 246)];
+//    }
+//    
+//    [UIView commitAnimations];
 }
 -(void)showPickerView:(BOOL)show WithDate:(NSString *)date{
     [self showPickerView:show];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegionView : UIView
+@interface RegionView : UIButton
 
 @end

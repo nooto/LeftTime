@@ -12,13 +12,21 @@
 #import "TimeView.h"
 #import "RegionView.h"
 #import "ResultView.h"
+#import "ResultViewController.h"
+
+typedef enum{
+    View_Normal,
+    View_Time,
+    View_Regoin,
+    View_Result,
+}EHView_Type;
 
 @interface ViewController ()
 
-//@property (nonatomic, strong) DDatePickerView *mDatePickerView;
-//@property (nonatomic, strong) RegionPickView *mRegionPickView;
+@property (nonatomic, strong) DDatePickerView *mDatePickerView;
+@property (nonatomic, strong) RegionPickView *mRegionPickView;
 
-
+@property (nonatomic, assign) EHView_Type  mViewType;
 @property (nonatomic, strong)  TimeView   *mTimeView;
 @property (nonatomic, strong)  RegionView *mRegionView;
 @property (nonatomic, strong)  ResultView *mResultView;
@@ -28,8 +36,9 @@
 
 -(TimeView*)mTimeView{
     if (!_mTimeView) {
-        _mTimeView = [[TimeView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_W, (SCREEN_H - 64)/3)];
-        [_mTimeView addTarget:self action:@selector(showTimePickerView) forControlEvents:UIControlEventTouchUpInside];
+        _mTimeView = [[TimeView alloc] initWithFrame:CGRectMake(0, [self navBarHeight], SCREEN_W, [self heigthForView])];
+        [_mTimeView addTarget:self action:@selector(showTimePickerView:) forControlEvents:UIControlEventTouchUpInside];
+        _mTimeView.tag = View_Time;
     }
     return _mTimeView;
 }
@@ -37,6 +46,8 @@
 -(RegionView*)mRegionView{
     if (!_mRegionView) {
         _mRegionView = [[RegionView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mTimeView.frame), SCREEN_W, CGRectGetHeight(_mTimeView.frame))];
+        [_mRegionView addTarget:self action:@selector(showTimePickerView:) forControlEvents:UIControlEventTouchUpInside];
+        _mRegionView.tag = View_Regoin;
     }
     return _mRegionView;
 }
@@ -44,18 +55,20 @@
 -(ResultView*)mResultView{
     if (!_mResultView) {
         _mResultView = [[ResultView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_mRegionView.frame), SCREEN_W, CGRectGetHeight(_mRegionView.frame))];
+        [_mResultView addTarget:self action:@selector(showTimePickerView:) forControlEvents:UIControlEventTouchUpInside];
+        _mResultView.tag = View_Result;
     }
     return _mResultView;
 }
 
 
-//-(DDatePickerView*)mDatePickerView{
-//    if (!_mDatePickerView) {
-//        _mDatePickerView = [[DDatePickerView alloc] initWithFrame:CGRectMake(0, SCREEN_H, 0, 0)];
+-(DDatePickerView*)mDatePickerView{
+    if (!_mDatePickerView) {
+        _mDatePickerView = [[DDatePickerView alloc] initWithFrame:CGRectMake(0, [self heigthForView]/2, SCREEN_W, [self heigthForView])];
 //        [_mDatePickerView showDatePickerView:NO];
-//    }
-//    return _mDatePickerView;
-//}
+    }
+    return _mDatePickerView;
+}
 //
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 //    UITouch *touchu = [touches anyObject];
@@ -69,49 +82,76 @@
 //    }
 //}
 //
-//-(RegionPickView*)mRegionPickView{
-//    if (!_mRegionPickView) {
-//        _mRegionPickView = [[RegionPickView alloc] initWithFrame:CGRectMake(0, SCREEN_H, SCREEN_W, 0)];
-//    }
-//    return _mRegionPickView;
-//}
+-(CGFloat)navBarHeight{
+    return 0;
+}
+-(CGFloat)heigthForView{
+    return (SCREEN_H - [self navBarHeight])/3;
+}
+
+-(RegionPickView*)mRegionPickView{
+    if (!_mRegionPickView) {
+        _mRegionPickView = [[RegionPickView alloc] initWithFrame:CGRectMake(0, [self heigthForView] / 2 * 3 , SCREEN_W,[self heigthForView])];
+    }
+    return _mRegionPickView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"how time fly!"];
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
+    [self.navigationController.navigationBar setHidden:YES];
+    [self.view addSubview:self.mDatePickerView];
+    [self.view addSubview:self.mRegionPickView];
     [self.view addSubview:self.mTimeView];
     [self.view addSubview:self.mRegionView];
     [self.view addSubview:self.mResultView];
     // Do any additional setup after loading the view, typically from a nib.
-//    [self.view addSubview:self.mDatePickerView];
-//    [self.view addSubview:self.mRegionPickView];
 }
 
--(void)showTimePickerView{
-    CGFloat moveGap  = CGRectGetHeight(_mTimeView.frame)/2;
-    [UIView animateWithDuration:0.3f animations:^{
-        [_mTimeView setFrame:CGRectMake(0, 64 - moveGap, CGRectGetWidth(_mTimeView.frame), CGRectGetHeight(_mTimeView.frame))];
-        [_mRegionView setFrame:CGRectMake(0, CGRectGetMinY(_mRegionView.frame) + moveGap, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
-        [_mResultView setFrame:CGRectMake(0, CGRectGetMinY(_mResultView.frame) + moveGap, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
-    }];
+-(void)showTimePickerView:(UIButton*)sender{
+    EHView_Type curType =(EHView_Type) sender.tag;
+    CGFloat moveGap  = [self heigthForView]/2;
+    CGFloat duration = 0.2f;
+    if (curType == self.mViewType) {
+        curType = View_Normal;
+    }
+    if (curType == View_Result) {
+        [UIView animateWithDuration:duration animations:^{
+            [_mTimeView setFrame:CGRectMake(0,   [self navBarHeight], CGRectGetWidth(_mTimeView.frame), CGRectGetHeight(_mTimeView.frame))];
+            [_mRegionView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 2, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
+            [_mResultView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 4, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
+        } completion:^(BOOL finished) {
+            ResultViewController *vc = [[ResultViewController alloc] init];
+            [self presentViewController:vc animated:YES completion:nil];
+        }];
+    }
+    else if (curType == View_Time) {
+        [UIView animateWithDuration:duration animations:^{
+            [_mTimeView setFrame:CGRectMake(0, [self navBarHeight] - moveGap, CGRectGetWidth(_mTimeView.frame), CGRectGetHeight(_mTimeView.frame))];
+            [_mRegionView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 3, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
+            [_mResultView setFrame:CGRectMake(0, [self navBarHeight] +  moveGap * 5, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
+        }];
+    }
+    else if (curType == View_Regoin){
+        [UIView animateWithDuration:duration animations:^{
+            [_mTimeView setFrame:CGRectMake(0,   [self navBarHeight] - moveGap, CGRectGetWidth(_mTimeView.frame), CGRectGetHeight(_mTimeView.frame))];
+            [_mRegionView setFrame:CGRectMake(0, [self navBarHeight] + moveGap, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
+            [_mResultView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 5, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
+        }];
+    }
+    else if (curType == View_Normal){
+        [UIView animateWithDuration:duration animations:^{
+            [_mTimeView setFrame:CGRectMake(0,   [self navBarHeight], CGRectGetWidth(_mTimeView.frame), CGRectGetHeight(_mTimeView.frame))];
+            [_mRegionView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 2, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
+            [_mResultView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 4, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
+        }];
+    }
+    self.mViewType = curType;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-//-(IBAction)resuletButtonAction:(id)sender{
-//    [self.mRegionPickView showPickerView:NO];
-//    [self.mDatePickerView showDatePickerView:NO];
-//}
-//
-//-(IBAction)datePickViewAction:(id)sender{
-//    [self.mRegionPickView showPickerView:NO];
-//    [self.mDatePickerView showDatePickerView:!self.mDatePickerView.isShow];
-//}
-//
-//-(IBAction)regionPickViewAction:(id)sender{
-//    [self.mDatePickerView showDatePickerView:NO];
-//    [self.mRegionPickView showPickerView:!self.mRegionPickView.isShow];
-//}
 @end

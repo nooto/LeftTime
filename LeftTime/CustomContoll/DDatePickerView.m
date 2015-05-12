@@ -25,17 +25,17 @@
     if (self) {
         // Initialization code
         [self setBackgroundColor:[UIColor whiteColor]];
-        isShow = NO;
         
         chineseStr = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 30)];
         [chineseStr setTextAlignment:NSTextAlignmentLeft];
         [chineseStr setTextColor:[UIColor whiteColor]];
         [chineseStr setFont:[UIFont systemFontOfSize:16]];
         [chineseStr setBackgroundColor:Color_orange_F866822];
-        [self addSubview:chineseStr];
+//        [self addSubview:chineseStr];
         
         mCurDate = [NSDate date];
-        mDatePikcer = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 30, SCREEN_W, frame.size.height - 44)];
+        mDatePikcer = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, frame.size.height)];
+        [mDatePikcer setFrame:self.bounds];
         mDatePikcer.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
         mDatePikcer.datePickerMode = UIDatePickerModeDate;
 
@@ -140,20 +140,20 @@
 }
 
 -(void)showDatePickerView:(BOOL)show {
-    isShow = show;
-    if (m_delegate && [m_delegate respondsToSelector:@selector(datePickerView:willShow:)]) {
-        [m_delegate datePickerView:self willShow:show];
-    }
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.3];
-    if (show) {
-        [self setFrame:CGRectMake(0, SCREEN_H - 246, SCREEN_W, 246)];
-    }
-    else{
-        [self setFrame:CGRectMake(0, SCREEN_H, SCREEN_W, 246)];
-    }
-    
-    [UIView commitAnimations];
+//    isShow = show;
+//    if (m_delegate && [m_delegate respondsToSelector:@selector(datePickerView:willShow:)]) {
+//        [m_delegate datePickerView:self willShow:show];
+//    }
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.3];
+//    if (show) {
+//        [self setFrame:CGRectMake(0, SCREEN_H - 246, SCREEN_W, 246)];
+//    }
+//    else{
+//        [self setFrame:CGRectMake(0, SCREEN_H, SCREEN_W, 246)];
+//    }
+//    
+//    [UIView commitAnimations];
 }
 
 @end

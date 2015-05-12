@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResultView : UIView
+@interface ResultView : UIButton
 
 @end
