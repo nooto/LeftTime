@@ -9,12 +9,16 @@
 #import "ViewController.h"
 #import "CustomContoll/DDatePickerView.h"
 #import "CustomContoll/RegionPickView.h"
+#import "TimeView.h"
+#import "RegionView.h"
+#import "ResultView.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) DDatePickerView *mDatePickerView;
 @property (nonatomic, strong) RegionPickView *mRegionPickView;
-@property (nonatomic, strong) IBOutlet UIButton *mTimeButton;
-@property (nonatomic, strong) IBOutlet UIButton *mRegionButton;
+@property (nonatomic, strong)  UIButton *mTimeButton;
+@property (nonatomic, strong)  UIButton *mRegionButton;
 @end
 
 @implementation ViewController
@@ -49,9 +53,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTitle:@"how time fly!"];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.view addSubview:self.mDatePickerView];
-    [self.view addSubview:self.mRegionPickView];
+//    [self.view addSubview:self.mDatePickerView];
+//    [self.view addSubview:self.mRegionPickView];
 }
 
 - (void)didReceiveMemoryWarning {

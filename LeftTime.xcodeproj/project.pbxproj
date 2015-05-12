@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E25EBB651B01E5D90063B1B7 /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EBB641B01E5D90063B1B7 /* TimeView.m */; };
+		E25EBB681B01E5F30063B1B7 /* RegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EBB671B01E5F30063B1B7 /* RegionView.m */; };
+		E25EBB6B1B01E5FF0063B1B7 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EBB6A1B01E5FF0063B1B7 /* ResultView.m */; };
 		E2EEA4721AF9EAD000D600ED /* DDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEA4711AF9EAD000D600ED /* DDatePickerView.m */; };
 		E2EEA4761AF9EC5500D600ED /* UIColor_custom.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEA4751AF9EC5500D600ED /* UIColor_custom.m */; };
 		E2EEA47B1AF9EF5000D600ED /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEA47A1AF9EF5000D600ED /* BaseViewController.m */; };
@@ -32,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E25EBB631B01E5D90063B1B7 /* TimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
+		E25EBB641B01E5D90063B1B7 /* TimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeView.m; sourceTree = "<group>"; };
+		E25EBB661B01E5F30063B1B7 /* RegionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionView.h; sourceTree = "<group>"; };
+		E25EBB671B01E5F30063B1B7 /* RegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionView.m; sourceTree = "<group>"; };
+		E25EBB691B01E5FF0063B1B7 /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
+		E25EBB6A1B01E5FF0063B1B7 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 		E2EEA4701AF9EAD000D600ED /* DDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDatePickerView.h; sourceTree = "<group>"; };
 		E2EEA4711AF9EAD000D600ED /* DDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDatePickerView.m; sourceTree = "<group>"; };
 		E2EEA4741AF9EC5500D600ED /* UIColor_custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_custom.h; sourceTree = "<group>"; };
@@ -77,6 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E25EBB621B01E5BD0063B1B7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E25EBB631B01E5D90063B1B7 /* TimeView.h */,
+				E25EBB641B01E5D90063B1B7 /* TimeView.m */,
+				E25EBB661B01E5F30063B1B7 /* RegionView.h */,
+				E25EBB671B01E5F30063B1B7 /* RegionView.m */,
+				E25EBB691B01E5FF0063B1B7 /* ResultView.h */,
+				E25EBB6A1B01E5FF0063B1B7 /* ResultView.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		E2EEA46F1AF9EAD000D600ED /* CustomContoll */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +141,7 @@
 		E2F029F21AF865BB004703EB /* LeftTime */ = {
 			isa = PBXGroup;
 			children = (
+				E25EBB621B01E5BD0063B1B7 /* UI */,
 				E2EEA4781AF9EDFC00D600ED /* Macro.h */,
 				E2EEA4731AF9EC2300D600ED /* Categorie */,
 				E2EEA46F1AF9EAD000D600ED /* CustomContoll */,
@@ -266,12 +289,15 @@
 			files = (
 				E2F029FC1AF865BB004703EB /* ViewController.m in Sources */,
 				E2EEA47E1AF9F26F00D600ED /* RegionPickView.m in Sources */,
+				E25EBB651B01E5D90063B1B7 /* TimeView.m in Sources */,
 				E2F029F91AF865BB004703EB /* AppDelegate.m in Sources */,
+				E25EBB681B01E5F30063B1B7 /* RegionView.m in Sources */,
 				E2F029F61AF865BB004703EB /* main.m in Sources */,
 				E2EEA4721AF9EAD000D600ED /* DDatePickerView.m in Sources */,
 				E2EEA4761AF9EC5500D600ED /* UIColor_custom.m in Sources */,
 				E2EEA47B1AF9EF5000D600ED /* BaseViewController.m in Sources */,
 				E2F02A1B1AF86978004703EB /* ResultViewController.m in Sources */,
+				E25EBB6B1B01E5FF0063B1B7 /* ResultView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
