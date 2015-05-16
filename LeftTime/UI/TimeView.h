@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TimeView : UIButton
-
+- (void)setLabelText:(NSString*)text;
 @end

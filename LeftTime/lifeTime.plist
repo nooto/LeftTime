@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>男</key>
+		<real>72.38</real>
+		<key>地区</key>
+		<string>全国</string>
+		<key>女</key>
+		<real>77.37</real>
+		<key>人均</key>
+		<real>74.83</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>北京</string>
+		<key>男</key>
+		<real>78.28</real>
+		<key>女</key>
+		<real>82.20999999999999</real>
+		<key>人均</key>
+		<real>80.18000000000001</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>天津</string>
+		<key>男</key>
+		<real>77.42</real>
+		<key>女</key>
+		<real>80.48</real>
+		<key>人均</key>
+		<real>78.89</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>河北</string>
+		
+		<key>男</key>
+		<real>72.7</real>
+		<key>女</key>
+		<real>77.47</real>
+		<key>人均</key>
+		<real>74.97</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>山西</string>
+		
+		<key>男</key>
+		<real>72.87</real>
+		<key>女</key>
+		<real>77.28</real>
+		<key>人均</key>
+		<real>74.92</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>内蒙古</string>
+		
+		<key>男</key>
+		<real>72.04000000000001</real>
+		<key>女</key>
+		<real>77.27</real>
+		<key>人均</key>
+		<real>74.44</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>辽宁</string>
+		
+		<key>男</key>
+		<real>74.12</real>
+		<key>女</key>
+		<real>78.86</real>
+		<key>人均</key>
+		<real>76.38</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>吉林</string>
+		
+		<key>男</key>
+		<real>74.12</real>
+		<key>女</key>
+		<real>78.84</real>
+		<key>人均</key>
+		<real>76.18000000000001</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>黑龙江</string>
+		
+		<key>男</key>
+		<real>73.52</real>
+		<key>女</key>
+		<real>78.81</real>
+		<key>人均</key>
+		<real>75.98</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>上海</string>
+		
+		<key>男</key>
+		<real>78.2</real>
+		<key>女</key>
+		<real>82.44</real>
+		<key>人均</key>
+		<real>80.26000000000001</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>江苏</string>
+		
+		<key>男</key>
+		<real>74.59999999999999</real>
+		<key>女</key>
+		<real>78.81</real>
+		<key>人均</key>
+		<real>76.63</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>浙江</string>
+		
+		<key>男</key>
+		<real>80.20999999999999</real>
+		<key>女</key>
+		<real>75.58</real>
+		<key>人均</key>
+		<real>77.73</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>安徽</string>
+		
+		<key>男</key>
+		<real>72.65000000000001</real>
+		<key>女</key>
+		<real>77.84</real>
+		<key>人均</key>
+		<real>75.08</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>福建</string>
+		
+		<key>男</key>
+		<real>73.27</real>
+		<key>女</key>
+		<real>78.64</real>
+		<key>人均</key>
+		<real>75.76000000000001</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>江西</string>
+		
+		<key>男</key>
+		<real>72.38</real>
+		<key>女</key>
+		<real>77.37</real>
+		<key>人均</key>
+		<real>74.83</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>山东</string>
+		
+		<key>男</key>
+		<real>74.05</real>
+		<key>女</key>
+		<real>79.06</real>
+		<key>人均</key>
+		<real>76.45999999999999</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>河南</string>
+		
+		<key>男</key>
+		<real>71.84</real>
+		<key>女</key>
+		<real>77.59</real>
+		<key>人均</key>
+		<real>73.41</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>湖北</string>
+		
+		<key>男</key>
+		<real>72.68000000000001</real>
+		<key>女</key>
+		<real>77.34999999999999</real>
+		<key>人均</key>
+		<real>74.87</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>湖南</string>
+		
+		<key>男</key>
+		<real>72.28</real>
+		<key>女</key>
+		<real>77.48</real>
+		<key>人均</key>
+		<real>74.7</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>广东</string>
+		
+		<key>男</key>
+		<real>74</real>
+		<key>女</key>
+		<real>79.37</real>
+		<key>人均</key>
+		<real>76.48999999999999</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>广西</string>
+		
+		<key>男</key>
+		<real>71.77</real>
+		<key>女</key>
+		<real>79.05</real>
+		<key>人均</key>
+		<real>75.11</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>海南</string>
+		
+		<key>男</key>
+		<real>73.2</real>
+		<key>女</key>
+		<real>80.01000000000001</real>
+		<key>人均</key>
+		<real>76.3</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>重庆</string>
+		
+		<key>男</key>
+		<real>73.16</real>
+		<key>女</key>
+		<real>78.59999999999999</real>
+		<key>人均</key>
+		<real>75.7</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>四川</string>
+		
+		<key>男</key>
+		<real>72.25</real>
+		<key>女</key>
+		<real>77.59</real>
+		<key>人均</key>
+		<real>74.75</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>贵州</string>
+		
+		<key>男</key>
+		<real>68.43000000000001</real>
+		<key>女</key>
+		<real>74.11</real>
+		<key>人均</key>
+		<real>71.09999999999999</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>云南</string>
+		
+		<key>男</key>
+		<real>67.06</real>
+		<key>女</key>
+		<real>72.43000000000001</real>
+		<key>人均</key>
+		<real>69.54000000000001</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>西藏</string>
+		
+		<key>男</key>
+		<real>66.33</real>
+		<key>女</key>
+		<real>70.06999999999999</real>
+		<key>人均</key>
+		<real>68.17</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>陕西</string>
+		
+		<key>男</key>
+		<real>72.84</real>
+		<key>女</key>
+		<real>76.73999999999999</real>
+		<key>人均</key>
+		<real>74.68000000000001</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>甘肃</string>
+		
+		<key>男</key>
+		<real>70.59999999999999</real>
+		<key>女</key>
+		<real>74.06</real>
+		<key>人均</key>
+		<real>72.23</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>宁夏</string>
+		
+		<key>男</key>
+		<real>68.11</real>
+		<key>女</key>
+		<real>72.06999999999999</real>
+		<key>人均</key>
+		<real>69.95999999999999</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>青海</string>
+		
+		<key>男</key>
+		<real>71.31</real>
+		<key>女</key>
+		<real>75.70999999999999</real>
+		<key>人均</key>
+		<real>73.38</real>
+	</dict>
+	<dict>
+		<key>地区</key>
+		<string>新疆</string>
+		
+		<key>男</key>
+		<real>70.3</real>
+		<key>女</key>
+		<real>74.86</real>
+		<key>人均</key>
+		<real>72.34999999999999</real>
+	</dict>
+</array>
+</plist>

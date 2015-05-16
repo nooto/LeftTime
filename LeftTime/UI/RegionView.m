@@ -10,6 +10,10 @@
 #import "CategorieHelper.h"
 #import "Macro.h"
 
+@interface RegionView()
+@property (nonatomic, strong) UILabel *mLabel;
+
+@end
 @implementation RegionView
 
 -(id)initWithFrame:(CGRect)frame{
@@ -19,10 +23,13 @@
         [textLabel setText:@"地区"];
         textLabel.textAlignment = NSTextAlignmentCenter;
         textLabel.center = CGPointMake(self.center.x, CGRectGetHeight(frame)/2);
-        [textLabel setTextColor:[UIColor whiteColor]];
+        [textLabel setTextColor:[UIColor blackColor]];
         [self addSubview:textLabel];
+        self.mLabel = textLabel;
     }
     return self;
 }
-
+- (void)setLabelText:(NSString*)text{
+    [self.mLabel setText:text];
+}
 @end

@@ -47,6 +47,7 @@
     [self.view addSubview:addButton3];
 }
 -(void)logButton{
+    [self.navigationController popViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

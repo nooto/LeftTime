@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RegionView : UIButton
-
+- (void)setLabelText:(NSString*)text;
 @end

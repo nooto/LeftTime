@@ -19,7 +19,7 @@
         [textLabel setText:@"结果"];
         textLabel.textAlignment = NSTextAlignmentCenter;
         textLabel.center = CGPointMake(self.center.x, CGRectGetHeight(frame)/2);
-        [textLabel setTextColor:[UIColor whiteColor]];
+        [textLabel setTextColor:[UIColor blackColor]];
         [self addSubview:textLabel];
     }
     return self;

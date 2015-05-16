@@ -21,7 +21,7 @@ typedef enum{
     View_Result,
 }EHView_Type;
 
-@interface ViewController ()
+@interface ViewController ()<DDatePickerViewDelegate, RegionPickViewDelegate>
 
 @property (nonatomic, strong) DDatePickerView *mDatePickerView;
 @property (nonatomic, strong) RegionPickView *mRegionPickView;
@@ -65,6 +65,7 @@ typedef enum{
 -(DDatePickerView*)mDatePickerView{
     if (!_mDatePickerView) {
         _mDatePickerView = [[DDatePickerView alloc] initWithFrame:CGRectMake(0, [self heigthForView]/2, SCREEN_W, [self heigthForView])];
+        _mDatePickerView.m_delegate = self;
 //        [_mDatePickerView showDatePickerView:NO];
     }
     return _mDatePickerView;
@@ -92,6 +93,7 @@ typedef enum{
 -(RegionPickView*)mRegionPickView{
     if (!_mRegionPickView) {
         _mRegionPickView = [[RegionPickView alloc] initWithFrame:CGRectMake(0, [self heigthForView] / 2 * 3 , SCREEN_W,[self heigthForView])];
+        _mRegionPickView.m_delegate = self;
     }
     return _mRegionPickView;
 }
@@ -106,6 +108,7 @@ typedef enum{
     [self.view addSubview:self.mTimeView];
     [self.view addSubview:self.mRegionView];
     [self.view addSubview:self.mResultView];
+    self.mTimeView.backgroundColor = self.mRegionView.backgroundColor = self.mResultView.backgroundColor = [UIColor yellowColor];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -123,7 +126,8 @@ typedef enum{
             [_mResultView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 4, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
         } completion:^(BOOL finished) {
             ResultViewController *vc = [[ResultViewController alloc] init];
-            [self presentViewController:vc animated:YES completion:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+//            [self presentViewController:vc animated:YES completion:nil];
         }];
     }
     else if (curType == View_Time) {
@@ -148,6 +152,14 @@ typedef enum{
         }];
     }
     self.mViewType = curType;
+}
+
+
+-(void)datePickerView:(DDatePickerView *)pickerVeiw SelectDate:(NSDate *)date{
+//        self.mTimeView set
+}
+- (void)pickerView:(RegionPickView *)pickerVeiw SelectDate:(NSDictionary *)date{
+    [self.mRegionView setLabelText:date[@"地区"]];
 }
 
 - (void)didReceiveMemoryWarning {

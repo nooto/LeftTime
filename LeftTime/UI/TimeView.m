@@ -10,6 +10,9 @@
 #import "CategorieHelper.h"
 #import "Macro.h"
 
+@interface TimeView()
+@property (nonatomic, assign) UILabel *mLabel;
+@end
 @implementation TimeView
 -(id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
@@ -18,10 +21,15 @@
         [textLabel setText:@"时间"];
         textLabel.textAlignment = NSTextAlignmentCenter;
         textLabel.center = CGPointMake(self.center.x, CGRectGetHeight(frame)/2);
-        [textLabel setTextColor:[UIColor whiteColor]];
+        [textLabel setTextColor:[UIColor blackColor]];
         [self addSubview:textLabel];
+        self.mLabel = textLabel;
     }
     return self;
+}
+
+- (void)setLabelText:(NSString*)text{
+    [self.mLabel setText:text];
 }
 
 @end

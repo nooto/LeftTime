@@ -10,6 +10,7 @@
 		E25EBB651B01E5D90063B1B7 /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EBB641B01E5D90063B1B7 /* TimeView.m */; };
 		E25EBB681B01E5F30063B1B7 /* RegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EBB671B01E5F30063B1B7 /* RegionView.m */; };
 		E25EBB6B1B01E5FF0063B1B7 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25EBB6A1B01E5FF0063B1B7 /* ResultView.m */; };
+		E2D0E3B31B072E8B00CB9FB5 /* lifeTime.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2D0E3B21B072E8B00CB9FB5 /* lifeTime.plist */; };
 		E2EEA4721AF9EAD000D600ED /* DDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEA4711AF9EAD000D600ED /* DDatePickerView.m */; };
 		E2EEA4761AF9EC5500D600ED /* UIColor_custom.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEA4751AF9EC5500D600ED /* UIColor_custom.m */; };
 		E2EEA47B1AF9EF5000D600ED /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEA47A1AF9EF5000D600ED /* BaseViewController.m */; };
@@ -41,6 +42,7 @@
 		E25EBB671B01E5F30063B1B7 /* RegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionView.m; sourceTree = "<group>"; };
 		E25EBB691B01E5FF0063B1B7 /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
 		E25EBB6A1B01E5FF0063B1B7 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
+		E2D0E3B21B072E8B00CB9FB5 /* lifeTime.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lifeTime.plist; sourceTree = "<group>"; };
 		E2EEA4701AF9EAD000D600ED /* DDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDatePickerView.h; sourceTree = "<group>"; };
 		E2EEA4711AF9EAD000D600ED /* DDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDatePickerView.m; sourceTree = "<group>"; };
 		E2EEA4741AF9EC5500D600ED /* UIColor_custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_custom.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		E2F029F31AF865BB004703EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E2D0E3B21B072E8B00CB9FB5 /* lifeTime.plist */,
 				E2F029F41AF865BB004703EB /* Info.plist */,
 				E2F029F51AF865BB004703EB /* main.m */,
 			);
@@ -270,6 +273,7 @@
 				E2F029FF1AF865BB004703EB /* Main.storyboard in Resources */,
 				E2F02A041AF865BB004703EB /* LaunchScreen.xib in Resources */,
 				E2F02A011AF865BB004703EB /* Images.xcassets in Resources */,
+				E2D0E3B31B072E8B00CB9FB5 /* lifeTime.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

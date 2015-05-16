@@ -11,7 +11,7 @@
 @class RegionPickView;
 @protocol RegionPickViewDelegate <NSObject>
 
-- (void)pickerView:(RegionPickView *)pickerVeiw SelectDate:(NSString*)date;
+- (void)pickerView:(RegionPickView *)pickerVeiw SelectDate:(NSDictionary*)date;
 @optional
 - (void)pickerView:(RegionPickView *)pickerView willShow:(BOOL)show;
 

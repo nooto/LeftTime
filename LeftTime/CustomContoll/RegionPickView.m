@@ -13,6 +13,8 @@
 @property(nonatomic, strong) UIPickerView *mPikcer;
 @property(nonatomic, strong) UILabel *bgLabel;
 @property(nonatomic, strong) UILabel *chineseStr;
+
+@property (nonatomic, strong) NSArray *mSourceData;
 @end
 
 @implementation RegionPickView
@@ -41,6 +43,53 @@
     }
     return self;
 }
+
+-(NSArray*)mSourceData{
+    if (!_mSourceData) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"lifeTime.plist" ofType:nil];
+        
+        NSArray *arr = [NSArray arrayWithContentsOfFile:path];
+        _mSourceData = [NSArray arrayWithArray:[arr sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            NSDictionary *dict1= nil;
+            NSDictionary *dict2=nil;
+            if ([obj1 isKindOfClass:[NSDictionary class]]) {
+                dict1 = (NSDictionary*)obj1;
+            }
+            if ([obj2 isKindOfClass:[NSDictionary class]]) {
+                dict2 = (NSDictionary*)obj2;
+            }
+//            return [a integerValue] > [b integerValue];
+
+            return [dict1[@"人均"] floatValue] < [dict2[@"人均"] floatValue];
+        }]];
+//        NSDictionary *sourceData = [NSDictionary dictionaryWithContentsOfFile:path];
+//        [sourceData enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+//            NSDictionary *dict1= nil;
+//            NSDictionary *dict2=nil;
+//            if ([obj1 isKindOfClass:[NSDictionary class]]) {
+//                dict1 = (NSDictionary*)obj1;
+//            }
+//            if ([obj2 isKindOfClass:[NSDictionary class]]) {
+//                dict2 = (NSDictionary*)obj2;
+//            }
+//            return [obj1[@"人均"] compare:obj2[@"人均"]];
+//        }];
+//        
+//        _mSourceData =  [NSArray arrayWithArray:[sourceData keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//            NSDictionary *dict1= nil;
+//            NSDictionary *dict2=nil;
+//            if ([obj1 isKindOfClass:[NSDictionary class]]) {
+//                dict1 = (NSDictionary*)obj1;
+//            }
+//            if ([obj2 isKindOfClass:[NSDictionary class]]) {
+//                dict2 = (NSDictionary*)obj2;
+//            }
+//            return [obj1[@"人均"] compare:obj2[@"人均"]];
+//        }]];
+    }
+    
+    return _mSourceData;
+}
 -(void)leftButtonAction{
     [self showPickerView:NO];
 }
@@ -49,35 +98,31 @@
 }
 
 -(void)showPickerView:(BOOL)show {
-//    _isShow = show;
-//    
-//    [UIView beginAnimations:nil context:nil];
-//    [UIView setAnimationDuration:0.3];
-//    if (show) {
-//        [self setFrame:CGRectMake(0, SCREEN_H - 246, SCREEN_W, 246)];
-//    }
-//    else{
-//        [self setFrame:CGRectMake(0, SCREEN_H, SCREEN_W, 246)];
-//    }
-//    
-//    [UIView commitAnimations];
 }
+
 -(void)showPickerView:(BOOL)show WithDate:(NSString *)date{
     [self showPickerView:show];
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 2;
+    return 1;
 }
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
     return 55.0f;
 }
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 32;
+    return self.mSourceData.count;
 }
 -(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return @"哈哈";
+    NSDictionary *dict = [self.mSourceData objectAtIndex:row];
+    return dict[@"地区"];
 }
 
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    if (self.m_delegate && [self.m_delegate respondsToSelector:@selector(pickerView:SelectDate:)]) {
+        NSDictionary *dict = [self.mSourceData objectAtIndex:row];
+        [self.m_delegate pickerView:self SelectDate:dict];
+    }
+}
 
 @end
