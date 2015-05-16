@@ -43,6 +43,20 @@
     }
     return self;
 }
+//<?xml version="1.0" encoding="UTF-8"?>
+//<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+//<plist version="1.0">
+//<dict>
+//<key>男</key>
+//<real>72.38</real>
+//<key>地区</key>
+//<string>全国</string>
+//<key>女</key>
+//<real>77.37</real>
+//<key>人均</key>
+//<real>74.83</real>
+//</dict>
+//</plist>
 
 -(NSArray*)mSourceData{
     if (!_mSourceData) {
@@ -58,34 +72,8 @@
             if ([obj2 isKindOfClass:[NSDictionary class]]) {
                 dict2 = (NSDictionary*)obj2;
             }
-//            return [a integerValue] > [b integerValue];
-
             return [dict1[@"人均"] floatValue] < [dict2[@"人均"] floatValue];
         }]];
-//        NSDictionary *sourceData = [NSDictionary dictionaryWithContentsOfFile:path];
-//        [sourceData enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-//            NSDictionary *dict1= nil;
-//            NSDictionary *dict2=nil;
-//            if ([obj1 isKindOfClass:[NSDictionary class]]) {
-//                dict1 = (NSDictionary*)obj1;
-//            }
-//            if ([obj2 isKindOfClass:[NSDictionary class]]) {
-//                dict2 = (NSDictionary*)obj2;
-//            }
-//            return [obj1[@"人均"] compare:obj2[@"人均"]];
-//        }];
-//        
-//        _mSourceData =  [NSArray arrayWithArray:[sourceData keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-//            NSDictionary *dict1= nil;
-//            NSDictionary *dict2=nil;
-//            if ([obj1 isKindOfClass:[NSDictionary class]]) {
-//                dict1 = (NSDictionary*)obj1;
-//            }
-//            if ([obj2 isKindOfClass:[NSDictionary class]]) {
-//                dict2 = (NSDictionary*)obj2;
-//            }
-//            return [obj1[@"人均"] compare:obj2[@"人均"]];
-//        }]];
     }
     
     return _mSourceData;

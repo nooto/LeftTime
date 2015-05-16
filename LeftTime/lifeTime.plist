@@ -3,16 +3,6 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>男</key>
-		<real>72.38</real>
-		<key>地区</key>
-		<string>全国</string>
-		<key>女</key>
-		<real>77.37</real>
-		<key>人均</key>
-		<real>74.83</real>
-	</dict>
-	<dict>
 		<key>地区</key>
 		<string>北京</string>
 		<key>男</key>
@@ -35,7 +25,6 @@
 	<dict>
 		<key>地区</key>
 		<string>河北</string>
-		
 		<key>男</key>
 		<real>72.7</real>
 		<key>女</key>
@@ -46,7 +35,6 @@
 	<dict>
 		<key>地区</key>
 		<string>山西</string>
-		
 		<key>男</key>
 		<real>72.87</real>
 		<key>女</key>
@@ -57,7 +45,6 @@
 	<dict>
 		<key>地区</key>
 		<string>内蒙古</string>
-		
 		<key>男</key>
 		<real>72.04000000000001</real>
 		<key>女</key>
@@ -68,7 +55,6 @@
 	<dict>
 		<key>地区</key>
 		<string>辽宁</string>
-		
 		<key>男</key>
 		<real>74.12</real>
 		<key>女</key>
@@ -79,7 +65,6 @@
 	<dict>
 		<key>地区</key>
 		<string>吉林</string>
-		
 		<key>男</key>
 		<real>74.12</real>
 		<key>女</key>
@@ -90,7 +75,6 @@
 	<dict>
 		<key>地区</key>
 		<string>黑龙江</string>
-		
 		<key>男</key>
 		<real>73.52</real>
 		<key>女</key>
@@ -101,7 +85,6 @@
 	<dict>
 		<key>地区</key>
 		<string>上海</string>
-		
 		<key>男</key>
 		<real>78.2</real>
 		<key>女</key>
@@ -112,7 +95,6 @@
 	<dict>
 		<key>地区</key>
 		<string>江苏</string>
-		
 		<key>男</key>
 		<real>74.59999999999999</real>
 		<key>女</key>
@@ -123,7 +105,6 @@
 	<dict>
 		<key>地区</key>
 		<string>浙江</string>
-		
 		<key>男</key>
 		<real>80.20999999999999</real>
 		<key>女</key>
@@ -134,7 +115,6 @@
 	<dict>
 		<key>地区</key>
 		<string>安徽</string>
-		
 		<key>男</key>
 		<real>72.65000000000001</real>
 		<key>女</key>
@@ -145,7 +125,6 @@
 	<dict>
 		<key>地区</key>
 		<string>福建</string>
-		
 		<key>男</key>
 		<real>73.27</real>
 		<key>女</key>
@@ -156,7 +135,6 @@
 	<dict>
 		<key>地区</key>
 		<string>江西</string>
-		
 		<key>男</key>
 		<real>72.38</real>
 		<key>女</key>
@@ -167,7 +145,6 @@
 	<dict>
 		<key>地区</key>
 		<string>山东</string>
-		
 		<key>男</key>
 		<real>74.05</real>
 		<key>女</key>
@@ -178,7 +155,6 @@
 	<dict>
 		<key>地区</key>
 		<string>河南</string>
-		
 		<key>男</key>
 		<real>71.84</real>
 		<key>女</key>
@@ -189,7 +165,6 @@
 	<dict>
 		<key>地区</key>
 		<string>湖北</string>
-		
 		<key>男</key>
 		<real>72.68000000000001</real>
 		<key>女</key>
@@ -200,7 +175,6 @@
 	<dict>
 		<key>地区</key>
 		<string>湖南</string>
-		
 		<key>男</key>
 		<real>72.28</real>
 		<key>女</key>
@@ -211,7 +185,6 @@
 	<dict>
 		<key>地区</key>
 		<string>广东</string>
-		
 		<key>男</key>
 		<real>74</real>
 		<key>女</key>
@@ -222,7 +195,6 @@
 	<dict>
 		<key>地区</key>
 		<string>广西</string>
-		
 		<key>男</key>
 		<real>71.77</real>
 		<key>女</key>
@@ -233,7 +205,6 @@
 	<dict>
 		<key>地区</key>
 		<string>海南</string>
-		
 		<key>男</key>
 		<real>73.2</real>
 		<key>女</key>
@@ -244,7 +215,6 @@
 	<dict>
 		<key>地区</key>
 		<string>重庆</string>
-		
 		<key>男</key>
 		<real>73.16</real>
 		<key>女</key>
@@ -255,7 +225,6 @@
 	<dict>
 		<key>地区</key>
 		<string>四川</string>
-		
 		<key>男</key>
 		<real>72.25</real>
 		<key>女</key>
@@ -266,7 +235,6 @@
 	<dict>
 		<key>地区</key>
 		<string>贵州</string>
-		
 		<key>男</key>
 		<real>68.43000000000001</real>
 		<key>女</key>
@@ -277,7 +245,6 @@
 	<dict>
 		<key>地区</key>
 		<string>云南</string>
-		
 		<key>男</key>
 		<real>67.06</real>
 		<key>女</key>
@@ -288,7 +255,6 @@
 	<dict>
 		<key>地区</key>
 		<string>西藏</string>
-		
 		<key>男</key>
 		<real>66.33</real>
 		<key>女</key>
@@ -299,7 +265,6 @@
 	<dict>
 		<key>地区</key>
 		<string>陕西</string>
-		
 		<key>男</key>
 		<real>72.84</real>
 		<key>女</key>
@@ -310,7 +275,6 @@
 	<dict>
 		<key>地区</key>
 		<string>甘肃</string>
-		
 		<key>男</key>
 		<real>70.59999999999999</real>
 		<key>女</key>
@@ -321,7 +285,6 @@
 	<dict>
 		<key>地区</key>
 		<string>宁夏</string>
-		
 		<key>男</key>
 		<real>68.11</real>
 		<key>女</key>
@@ -332,7 +295,6 @@
 	<dict>
 		<key>地区</key>
 		<string>青海</string>
-		
 		<key>男</key>
 		<real>71.31</real>
 		<key>女</key>
@@ -343,7 +305,6 @@
 	<dict>
 		<key>地区</key>
 		<string>新疆</string>
-		
 		<key>男</key>
 		<real>70.3</real>
 		<key>女</key>

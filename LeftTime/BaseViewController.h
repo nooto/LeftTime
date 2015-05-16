@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "CategorieHelper.h"
 #import "Macro.h"
-@interface BaseViewController : UIViewController
 
+#define KDIQU @"地区"
+#define KNAN @"男"
+#define KNV @"女"
+#define KRENJUN @"人均"
+
+@interface BaseViewController : UIViewController
 @end

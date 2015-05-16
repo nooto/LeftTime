@@ -13,6 +13,10 @@
 #import "RegionView.h"
 #import "ResultView.h"
 #import "ResultViewController.h"
+//#define KDIQU @"地区"
+//#define KNAN @"男"
+//#define KNV @"女"
+//#define KRENJUN @"人均"
 
 typedef enum{
     View_Normal,
@@ -30,6 +34,8 @@ typedef enum{
 @property (nonatomic, strong)  TimeView   *mTimeView;
 @property (nonatomic, strong)  RegionView *mRegionView;
 @property (nonatomic, strong)  ResultView *mResultView;
+
+@property (nonatomic, copy) NSDictionary *mCurAgeDict;
 @end
 
 @implementation ViewController
@@ -59,6 +65,28 @@ typedef enum{
         _mResultView.tag = View_Result;
     }
     return _mResultView;
+}
+
+-(NSDictionary*)mCurAgeDict{
+    if (!_mCurAgeDict) {
+        _mCurAgeDict = [[NSDictionary alloc] initWithObjectsAndKeys:@"全国",KDIQU,@"72.38",KNAN, @"77.37",KNV,@"74.83",KRENJUN, nil];
+    }
+//    <?xml version="1.0" encoding="UTF-8"?>
+//    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+//    <plist version="1.0">
+//    <dict>
+//    <key>男</key>
+//    <real>72.38</real>
+//    <key>地区</key>
+//    <string>全国</string>
+//    <key>女</key>
+//    <real>77.37</real>
+//    <key>人均</key>
+//    <real>74.83</real>
+//    </dict>
+//    </plist>
+//
+    return _mCurAgeDict;
 }
 
 
@@ -159,6 +187,7 @@ typedef enum{
 //        self.mTimeView set
 }
 - (void)pickerView:(RegionPickView *)pickerVeiw SelectDate:(NSDictionary *)date{
+    self.mCurAgeDict = date;
     [self.mRegionView setLabelText:date[@"地区"]];
 }
 
