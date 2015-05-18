@@ -13,6 +13,7 @@
 #import "RegionView.h"
 #import "ResultView.h"
 #import "ResultViewController.h"
+#import "ResultViewController2.h"
 //#define KDIQU @"地区"
 //#define KNAN @"男"
 //#define KNV @"女"
@@ -181,8 +182,13 @@ typedef enum{
             [_mRegionView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 2, CGRectGetWidth(_mRegionView.frame), CGRectGetHeight(_mRegionView.frame))];
             [_mResultView setFrame:CGRectMake(0, [self navBarHeight] + moveGap * 4, CGRectGetWidth(_mResultView.frame), CGRectGetHeight(_mResultView.frame))];
         } completion:^(BOOL finished) {
-            ResultViewController *vc = [[ResultViewController alloc] init];
+            ResultViewController2 *vc = [[ResultViewController2 alloc] init];
+            NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
+            [vc setChartViewValue:date allTime:71.2];
             [self.navigationController pushViewController:vc animated:YES];
+
+//            ResultViewController *vc = [[ResultViewController alloc] init];
+//            [self.navigationController pushViewController:vc animated:YES];
 //            [self presentViewController:vc animated:YES completion:nil];
         }];
     }
@@ -210,6 +216,15 @@ typedef enum{
     self.mViewType = curType;
 }
 
+
+-(void)showResultViewController2{
+    ResultViewController2 *vc = [[ResultViewController2 alloc] init];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:0];
+    [vc setChartViewValue:date allTime:71.2];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+
+}
 
 -(void)datePickerView:(DDatePickerView *)pickerVeiw SelectDate:(NSDate *)date{
 //        self.mTimeView set
