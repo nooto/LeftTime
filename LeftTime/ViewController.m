@@ -140,6 +140,34 @@ typedef enum{
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self resignFirstResponder];
+}
+
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"begin shark");
+    }
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"end shark");
+    }
+}
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"cancel shark");
+    }
+
+}
 -(void)showTimePickerView:(UIButton*)sender{
     EHView_Type curType =(EHView_Type) sender.tag;
     CGFloat moveGap  = [self heigthForView]/2;
